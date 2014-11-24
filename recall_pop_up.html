@@ -1,0 +1,45 @@
+<div id="overlay" class="web_dialog_overlay"></div>
+<div id="dialog" class="web_dialog">
+<form method="post" id="recall_form">
+   <table style="width: 100%; border: 0px;" cellpadding="3" cellspacing="0">
+      <tr>
+         <td class="web_dialog_title">Recall</td>
+         <td class="web_dialog_title align_right">
+            <a href="#" id="btnClose">Close</a>
+         </td>
+      </tr>
+      <tr>
+         <td>&nbsp;</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td colspan="2" style="padding-left: 15px;">
+            <b>Enter reason for recalling Job Order:</b>
+         </td>
+      </tr>
+      <tr>
+         <td>&nbsp;</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td colspan="2" style="padding-left: 15px;">
+			<input type="hidden" name="recall_jo_numb" id="recall_jo_numb" value="" />
+			<input type="hidden" name="recall_doc_ref" id="recall_doc_ref" value="" />
+			<input type="hidden" name="recall_module_no" id="recall_module_no" value="" />
+            <input type="hidden" name="recall_type" id="recall_type" value="" />
+			 <textarea rows="2" cols="38" class="input" id="recall_reason"  name="recall_reason" onFocus="get_jo_numb();get_doc_ref();get_module_num();"></textarea>
+         </td>
+      </tr>
+      <tr>
+         <td>&nbsp;</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td colspan="2" style="text-align: center;">
+            <input id="btnSubmit" type="button" value="Submit" class="btn btn-danger css_button btn-xs" name="submit_now" />
+			<span class="ajax_loader"></span>
+         </td>
+      </tr>
+   </table>
+</form>
+</div>

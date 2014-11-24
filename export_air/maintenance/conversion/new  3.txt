@@ -1,0 +1,33 @@
+SELECT  pcv_hdr.job_order_no,
+pcv_hdr.cust_name,
+pcv_hdr.mcarref , 
+pcv_hdr.hcarref , 
+pcv_hdr.service_type ,           
+pcv_hdr.chg_wt ,           
+pcv_hdr.release_type ,           
+pcv_hdr.fd_bd     
+FROM pcv_hdr      
+WHERE ( pcv_hdr.job_order_no = 'OS-0' ) and          
+( pcv_hdr.pcv_stat = 'X' ) And          
+( pcv_hdr.validate_stat = 'X' )  
+GROUP BY pcv_hdr.job_order_no ,           
+pcv_hdr.cust_name ,           
+pcv_hdr.mcarref ,           
+pcv_hdr.hcarref ,           
+pcv_hdr.service_type ,           
+pcv_hdr.chg_wt ,           
+pcv_hdr.release_type ,           
+pcv_hdr.fd_bd
+
+
+SELECT  pcv_dtl.chg_desc ,           
+pcv_dtl.php_cost ,           
+pcv_dtl.receipted_exp ,           
+pcv_hdr.payee_code ,           
+pcv_dtl.pcv_no ,           
+pcv_hdr.station_id ,           
+pcv_dtl.cash  
+FROM {oj pcv_hdr LEFT OUTER JOIN pcv_dtl ON pcv_hdr.pcv_no = pcv_dtl.pcv_no}     
+WHERE ( pcv_dtl.job_order_no like :xjobno + '%' ) and          
+( pcv_hdr.pcv_stat = 'X' ) And          
+( pcv_hdr.validate_stat = 'X' ) 

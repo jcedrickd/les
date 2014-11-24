@@ -1,0 +1,298 @@
+body{
+font-size: 100%;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (min-width:2500px){
+    .container {
+    /*width: 2600px;*/
+	width: 2530px;
+    }                
+}
+
+@media only screen and (min-width:1900px){
+    .container {
+    width: 1840px;
+	/*width: 2000px;*/
+    }
+}
+@media only screen and (min-width:1600px){
+    .container {
+    width: 1550px;
+	/*width: 1700px;*/
+    }
+}
+@media only screen and (min-width:1300px){
+    .container {
+    width: 1260px;
+	/*width: 1400px;*/
+    }
+}
+
+.contbox
+{
+width: 96%;
+margin: auto;
+}
+
+hr{
+border-top-color: red;
+}
+#nav{
+    color: #ffffff;
+}
+/*start nav*/
+#nav,
+#nav ul,
+#nav ul li,
+#nav ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#nav ul ul {
+  display: none;
+}
+.align-right {
+  float: right;
+}
+#nav > ul > li > a {
+  padding: 15px 20px;
+  border-left: 1px solid #7f0000;
+  border-right: 1px solid #7f0000;
+  border-top: 1px solid #7f0000;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  background: #ff0000;
+  background: -webkit-linear-gradient(#ff0000, #b20000);
+  background: -moz-linear-gradient(#ff0000, #b20000);
+  background: -o-linear-gradient(#ff0000, #b20000);
+  background: -ms-linear-gradient(#ff0000, #b20000);
+  background: linear-gradient(#ff0000, #b20000);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+#nav > ul > li > a:hover,
+#nav > ul > li.active > a,
+#nav > ul > li.open > a {
+  color: #eeeeee;
+  background: #b20000;
+  background: -webkit-linear-gradient(#b20000, #e50000 );
+  background: -moz-linear-gradient(#b20000, #e50000 );
+  background: -o-linear-gradient(#b20000, #e50000 );
+  background: -ms-linear-gradient(#b20000, #e50000 );
+  background: linear-gradient(#b20000, #e50000 );
+}
+#nav > ul > li.open > a {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid #7f0000;
+}
+#nav > ul > li:last-child > a,
+#nav > ul > li.last > a {
+  border-bottom: 1px solid #7f0000;
+}
+.holder {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.holder::after,
+.holder::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  right: 20px;
+  z-index: 10;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.holder::after {
+  top: 17px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+}
+#nav > ul > li > a:hover > span::after,
+#nav > ul > li.active > a > span::after,
+#nav > ul > li.open > a > span::after {
+  border-color: #eeeeee;
+}
+.holder::before {
+  top: 18px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-color: inherit;
+  border-left-color: inherit;
+}
+#nav ul ul li a {
+  cursor: pointer;
+  border-bottom: 1px solid #32373e;
+  border-left: 1px solid #32373e;
+  border-right: 1px solid #32373e;
+  padding: 10px 20px;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 13px;
+  color: #eeeeee;
+  /*background: #49505a;*/
+  background:  #ff4c4c;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+#nav ul ul li:hover > a{
+background: #424852;    
+}
+#nav ul ul li.open > a,
+#nav ul ul li.active > a {
+  /*background: #424852;*/
+  background:  #ff4c4c;
+  color: #ffffff;
+}
+#nav ul ul li:first-child > a {
+  box-shadow: none;
+}
+#nav ul ul ul li:first-child > a {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+#nav ul ul ul li a {/*for sub menu*/
+  padding-left: 25px;
+  background: #ff7f7f;
+}
+#nav ul ul ul ul li a {/*for sub sub menu*/
+  padding-left: 30px;
+}
+#nav > ul > li > ul > li:last-child > a,
+#nav > ul > li > ul > li.last > a {
+  border-bottom: 0;
+}
+#nav > ul > li > ul > li.open:last-child > a,
+#nav > ul > li > ul > li.last.open > a {
+  border-bottom: 1px solid #32373e;
+}
+#nav > ul > li > ul > li.open:last-child > ul > li:last-child > a {
+  border-bottom: 0;
+}
+#nav ul ul li.has-sub > a::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  right: 20px;
+  z-index: 10;
+  top: 11.5px;
+  border-top: 2px solid #eeeeee;
+  border-left: 2px solid #eeeeee;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+#nav ul ul li.active > a::after,
+#nav ul ul li.open > a::after,
+#nav ul ul li > a:hover::after {
+  border-color: #ffffff;
+}
+
+/*end nav*/
+.tabs{
+border-bottom: 1px solid #ff7f7f;   
+}
+
+.tabs-header{
+background-color: #FFF !important; 
+border-color: #FFF !important; 
+}
+
+.tabs-panels{
+border-color: #ff4c4c;    
+}
+
+.tabs li a.tabs-inner, .tabs li.tabs-selected a.tabs-inner{
+border-color:#cc0000;    
+}
+
+/*selected main tab*/
+.tabs li.tabs-selected a.tabs-inner,.tabs li.tabs-selected a.tabs-inner:hover{
+color: #ffffff;
+background:#ff3232;
+border-color: white;
+}
+/*selected sub tab*/
+.tabs-panels .tabs li.tabs-selected a.tabs-inner,.tabs-panels .tabs li.tabs-selected a.tabs-inner:hover{
+/*
+color: #ff0000;
+background:#ffffff;
+*/
+color: #FFF;
+background:#FF3232;
+border-color: white;
+}
+/*not selected*/
+.tabs li a.tabs-inner{
+color: black;
+background: #ffe5e5;
+/*border-color:#cc0000;*/
+}
+.tabs li a.tabs-inner:hover{
+color: white;
+background: #424852;
+border-color: white;
+/*border-color:#cc0000;*/
+}
+/*end override easyui tab*/
+
+
+/* ------- CEDRICK ------------ */
+
+.currentpage
+{
+background: #369;
+color: #FFF;
+}
+
+.currentpage:hover
+{
+color: #FFF;
+}
+
+.pagipage
+{
+border : solid 1px #36F; 
+padding: 5px 10px; 
+margin: 5px
+}
+
+.pagipage:hover
+{
+background: #369;
+color: #FFF;
+text-decoration : none;
+font-weight: bold;
+}
+
+.staticpage
+{
+border : solid 1px #36F; 
+padding: 5px 10px; 
+margin: 5px
+}
+/* ------- CEDRICK ------------ */

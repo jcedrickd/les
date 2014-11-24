@@ -1,0 +1,21 @@
+<?php
+/* no status*/
+$save_disabled='';
+$print_or_post_disabled='disabled="disabled"';
+$post_disabled='disabled="disabled"';
+$unpost_disabled='disabled="disabled"';
+$re_print_disabled='disabled="disabled"';
+$cancel_disabled='disabled="disabled"';
+$remove_fn_disabled='disabled="disabled"';
+$force_post_disabled='disabled="disabled"';
+$print_jli_aai_disabled='disabled="disabled"';
+$print_pcv_per_jo_disabled='';
+$validate_disabled='disabled="disabled"';
+$unvalidate_disabled='disabled="disabled"';
+$force_validate_disabled='disabled="disabled"';
+$add_jo_disabled='disabled="disabled"';
+$add_disabled='disabled="disabled"';
+$delete_disabled='disabled="disabled"';
+$view_tariff_disabled='disabled="disabled"';
+$hide_column='display:none;';   
+?>
